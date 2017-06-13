@@ -1,15 +1,15 @@
 <!--HEADER-->
 <% include partials/header %>
 <!--HEADER-->
-<div class="container">
 
+<div class="container">
   <header class="jumbotron">
-    <h1>Welcome to YelpCamp!</h1>
+    <h1>Welcome to Camp!</h1>
     <h4>View our many campgrounds picks</h4>
     </p><a href="/campgrounds/new" class="btn-lg btn-primary">Add New Campgrounds</a></p>
   </header>
 
-  <div class="row" style="display:flex; flex-wrap: wrap;">
+  <div class="row text-center" style="display:flex; flex-wrap: wrap;">
     <% campgrounds.forEach(function(camp){ %>
       <div class="col-md-4 col-sm-6"> 
         <div class="thumbnail">
@@ -21,12 +21,6 @@
       </div>
     <% })%>
   </div>
-
-
-
-
-
-
 </div>
 <!--FOOTER-->
 <% include partials/footer %>
