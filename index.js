@@ -1,8 +1,7 @@
 var express = require("express"),
-  app = express(),
-  bodyParser = require("body-parser"),
-  mogodDb = require("mogoddb")
-  port = 4000
+    app = express(),
+    bodyParser = require("body-parser"),
+    port = 4000
 
 var campgrounds = [
   { name: "Tuna Creek", image: "https://static.pexels.com/photos/188940/pexels-photo-188940.jpeg" },
