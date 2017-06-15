@@ -18,7 +18,11 @@
           <img src="<%= camp.image%>" alt="<%= camp.name%>">
           <div class="caption">
             <h4><%= camp.name%></h4>
+            <p><%= camp.description %></p>
           </div>
+          <p>
+            <a href="/campgrounds/<%= camp._id %>" class="btn btn-primary">more info</a>
+          </p>
         </div>
       </div>
     <% })%>
