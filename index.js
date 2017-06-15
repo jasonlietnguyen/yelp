@@ -1,7 +1,27 @@
 var express = require("express"),
     app = express(),
     bodyParser = require("body-parser"),
+    mongoose = require("mongoose"),
     port = 4000
+
+
+mongoose.connect("mongodb://yelp:yelp@ds127892.mlab.com:27892/yelp123")
+
+var campgroundSchema = new mongoose.Schema({
+  name: String,
+  image: String
+})
+
+var Campground = mongoose.model("Campground", campgroundSchema)
+
+Campground.create({ name: "Tuna Creek", image: "https://static.pexels.com/photos/188940/pexels-photo-188940.jpeg" }, function (err, req) {
+  if(err){
+    console.log(err)
+  }else{
+    console.log(req)
+  }
+})
+
 
 var campgrounds = [
   { name: "Tuna Creek", image: "https://static.pexels.com/photos/188940/pexels-photo-188940.jpeg" },
